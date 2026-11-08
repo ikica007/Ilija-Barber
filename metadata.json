@@ -1,0 +1,6 @@
+{
+  "name": "Barber Ilija",
+  "description": "Premium barbershop website for Barber Ilija in Montenegro, featuring a clean, dark, and minimalistic design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
