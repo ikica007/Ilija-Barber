@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Clock, Instagram, Facebook, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Clock, Instagram, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { BARBERS } from '../data/barbers';
 
@@ -80,7 +80,7 @@ export default function Contact() {
                         {language === 'sr' ? 'LOKACIJA' : 'LOCATION'}
                       </h4>
                       <p className="text-gray-400 text-sm">
-                        Branka Deletića 50<br />81000 Podgorica, Crna Gora
+                        New City kvart, Branka Deletića 50<br />81000 Podgorica, Crna Gora
                       </p>
                     </div>
                   </div>
@@ -91,7 +91,12 @@ export default function Contact() {
                       <h4 className="font-semibold text-lg mb-1 tracking-wider uppercase">
                         {language === 'sr' ? 'POZOVITE NAS' : 'CALL US'}
                       </h4>
-                      <p className="text-gray-400 text-sm">+382 67 123 456</p>
+                      <a
+                        href="tel:+38267109777"
+                        className="text-gray-400 hover:text-brand-orange text-sm transition-colors font-medium"
+                      >
+                        +382 67 109 777
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -105,16 +110,12 @@ export default function Contact() {
                       </h4>
                       <ul className="text-gray-400 text-sm space-y-1">
                         <li className="flex justify-between w-full gap-4">
-                          <span>{language === 'sr' ? 'Pon-Pet:' : 'Mon-Fri:'}</span>{' '}
-                          <span>09:00 - 20:00</span>
-                        </li>
-                        <li className="flex justify-between w-full gap-4">
-                          <span>{language === 'sr' ? 'Sub:' : 'Sat:'}</span>{' '}
-                          <span>09:00 - 16:00</span>
+                          <span>{language === 'sr' ? 'Ponedjeljak – Subota:' : 'Monday – Saturday:'}</span>{' '}
+                          <span className="text-white font-medium">09:00 – 20:00</span>
                         </li>
                         <li className="flex justify-between w-full gap-4 text-gray-500">
-                          <span>{language === 'sr' ? 'Ned:' : 'Sun:'}</span>{' '}
-                          <span>{language === 'sr' ? 'Zatvoreno' : 'Closed'}</span>
+                          <span>{language === 'sr' ? 'Nedjelja:' : 'Sunday:'}</span>{' '}
+                          <span className="text-red-400/80 font-medium">{language === 'sr' ? 'Zatvoreno' : 'Closed'}</span>
                         </li>
                       </ul>
                     </div>
@@ -122,20 +123,16 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-white/5 flex gap-4">
+              <div className="pt-6 border-t border-white/5 flex items-center gap-4">
                 <a
-                  href="#"
-                  className="w-12 h-12 bg-brand-dark border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange hover:text-white transition-all duration-300 rounded-sm"
-                  aria-label="Instagram"
+                  href="https://www.instagram.com/ilijabarber/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-brand-dark border border-white/10 hover:border-brand-orange hover:bg-brand-orange hover:text-white text-gray-200 transition-all duration-300 rounded-sm group text-xs font-semibold tracking-wider uppercase"
+                  aria-label="Instagram @ilijabarber"
                 >
-                  <Instagram size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-brand-dark border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange hover:text-white transition-all duration-300 rounded-sm"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={20} />
+                  <Instagram size={18} className="text-brand-orange group-hover:text-white transition-colors" />
+                  <span>@ilijabarber</span>
                 </a>
               </div>
             </div>
@@ -248,7 +245,7 @@ export default function Contact() {
                     required
                     type="tel"
                     className="w-full bg-brand-dark/30 border border-white/5 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-brand-orange/50 focus:bg-brand-dark/80 transition-all rounded-sm placeholder:text-gray-600"
-                    placeholder="+382 6X XXX XXX"
+                    placeholder="+382 67 109 777"
                   />
                 </div>
 
