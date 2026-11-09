@@ -1,6 +1,8 @@
-import ilijaImg from '../assets/images/cartoon_barber_ilija_1794143517966.jpg';
-import markoImg from '../assets/images/cartoon_barber_marko_1794143533729.jpg';
-import nikolaImg from '../assets/images/cartoon_barber_nikola_1794143552238.jpg';
+import ilijaImg from '../assets/images/barber_ilija.jpg';
+import markoImg from '../assets/images/barber_marko.jpg';
+import nikolaImg from '../assets/images/barber_nikola.jpg';
+import filipImg from '../assets/images/barber_filip.jpg';
+import elenaImg from '../assets/images/barber_elena.jpg';
 
 export interface BarberService {
   name: {
@@ -287,6 +289,186 @@ export const BARBERS: Barber[] = [
         description: {
           sr: 'Ekskluzivni ritual nege kože lica, tople obloge i masaža glave.',
           en: 'Exclusive facial skin ritual, hot towel wrap, and relaxing scalp massage.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'filip',
+    name: 'FILIP',
+    role: {
+      sr: 'JUNIOR BERBER',
+      en: 'JUNIOR BARBER',
+    },
+    levelBadge: 'Junior Barber',
+    tagline: {
+      sr: 'Mlada energija, precizni moderni fejdovi i posvećenost svakom rezu.',
+      en: 'Young energy, sharp modern skin fades, and dedicated styling.',
+    },
+    image: filipImg,
+    services: [
+      {
+        name: {
+          sr: 'ŠIŠANJE',
+          en: 'HAIRCUT',
+        },
+        duration: '30 min',
+        price: '15 €',
+        description: {
+          sr: 'Moderno šišanje prilagođeno stilu klijenta, pranje i stilizovanje.',
+          en: 'Modern haircut tailored to your personal style, wash, and styling.',
+        },
+      },
+      {
+        name: {
+          sr: 'ŠIŠANJE I BRADA',
+          en: 'HAIRCUT & BEARD',
+        },
+        duration: '40 min',
+        price: '18 €',
+        popular: true,
+        description: {
+          sr: 'Kombinacija savremenog šišanja i detaljnog uređivanja brade.',
+          en: 'Haircut combined with detailed beard trimming and outlining.',
+        },
+      },
+      {
+        name: {
+          sr: 'KRALJEVSKO BRIJANJE',
+          en: 'ROYAL SHAVE',
+        },
+        duration: '20 min',
+        price: '10 €',
+        description: {
+          sr: 'Ugodno brijanje britvom sa toplim oblogama i umirujućom kremom.',
+          en: 'Traditional straight razor shave with warm towels and soothing cream.',
+        },
+      },
+      {
+        name: {
+          sr: 'KOMPLET USLUGA (VOSAK, HEDONISTIČKI TRETMAN, BRIJANJE I ŠIŠANJE)',
+          en: 'FULL SERVICE PACKAGE (WAX, HEDONISTIC, SHAVE & CUT)',
+        },
+        duration: '45 min',
+        price: '20 €',
+        popular: true,
+        description: {
+          sr: 'Kompletan paket sa voskom za lice, hedonističkim tretmanom i šišanjem.',
+          en: 'Full grooming package with facial waxing, hedonistic care, shave and haircut.',
+        },
+      },
+      {
+        name: {
+          sr: 'JUNIOR',
+          en: 'JUNIOR (KIDS)',
+        },
+        duration: '25 min',
+        price: '13 €',
+        description: {
+          sr: 'Pažljivo i strpljivo šišanje za mlađe generacije uz moderan stil.',
+          en: 'Gentle and stylish haircut for younger gents.',
+        },
+      },
+      {
+        name: {
+          sr: 'HEDONISTIČKI TRETMAN',
+          en: 'HEDONISTIC TREATMENT',
+        },
+        duration: '1 h',
+        price: '15 €',
+        description: {
+          sr: 'Opuštajući tretman lica toplom parom, maskom i masažom.',
+          en: 'Relaxing facial care with warm steam, mask, and soothing massage.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'elena',
+    name: 'ELENA',
+    role: {
+      sr: 'JUNIOR BERBER',
+      en: 'JUNIOR BARBER',
+    },
+    levelBadge: 'Junior Barber',
+    tagline: {
+      sr: 'Prefinjen pristup, savršene linije i vrhunski hedonistički tretmani.',
+      en: 'Refined touch, flawless silhouettes, and premier hedonistic facial treatments.',
+    },
+    image: elenaImg,
+    services: [
+      {
+        name: {
+          sr: 'ŠIŠANJE',
+          en: 'HAIRCUT',
+        },
+        duration: '30 min',
+        price: '15 €',
+        description: {
+          sr: 'Pedantno šišanje po meri, pranje kose i profesionalno oblikovanje.',
+          en: 'Precise custom haircut, refreshing wash, and professional styling.',
+        },
+      },
+      {
+        name: {
+          sr: 'ŠIŠANJE I BRADA',
+          en: 'HAIRCUT & BEARD',
+        },
+        duration: '40 min',
+        price: '18 €',
+        popular: true,
+        description: {
+          sr: 'Usklađeno šišanje kose i pažljivo konturisanje brade.',
+          en: 'Coordinated hair styling and gentle razor beard sculpting.',
+        },
+      },
+      {
+        name: {
+          sr: 'KRALJEVSKO BRIJANJE',
+          en: 'ROYAL SHAVE',
+        },
+        duration: '20 min',
+        price: '10 €',
+        description: {
+          sr: 'Tradicionalni tretman brijanja uz tople peškire i negu lica.',
+          en: 'Traditional shaving ritual with warm towels and soothing facial skincare.',
+        },
+      },
+      {
+        name: {
+          sr: 'KOMPLET USLUGA (VOSAK, HEDONISTIČKI TRETMAN, BRIJANJE I ŠIŠANJE)',
+          en: 'FULL SERVICE PACKAGE (WAX, HEDONISTIC, SHAVE & CUT)',
+        },
+        duration: '45 min',
+        price: '20 €',
+        popular: true,
+        description: {
+          sr: 'Sveobuhvatna nega za kosu, bradu i kožu lica uz vosak i relaksaciju.',
+          en: 'All-inclusive hair, beard, and facial skin care with waxing and relaxation.',
+        },
+      },
+      {
+        name: {
+          sr: 'JUNIOR',
+          en: 'JUNIOR (KIDS)',
+        },
+        duration: '25 min',
+        price: '13 €',
+        description: {
+          sr: 'Moderno i bezbedno šišanje za decu u prijatnoj atmosferi.',
+          en: 'Modern and gentle haircut for kids in a friendly atmosphere.',
+        },
+      },
+      {
+        name: {
+          sr: 'HEDONISTIČKI TRETMAN',
+          en: 'HEDONISTIC TREATMENT',
+        },
+        duration: '1 h',
+        price: '20 €',
+        description: {
+          sr: 'Ekskluzivni jednosatni ritual za revitalizaciju kože i potpunu relaksaciju.',
+          en: 'Exclusive one-hour ritual for skin revitalization and deep relaxation.',
         },
       },
     ],
