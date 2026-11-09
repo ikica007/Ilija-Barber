@@ -22,7 +22,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Contact Info & Map */}
+          {/* Informacije o kontaktu & Mapa */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +75,7 @@ export default function Contact() {
               </div>
             </div>
             
-            {/* Map iframe */}
+            {/* Google Mapa */}
             <div className="w-full h-64 sm:h-80 border border-white/5 rounded-b-sm overflow-hidden relative">
                <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.3824497495393!2d19.258836512130312!3d42.44101183017409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134deb336c53e02f%3A0xc3440cc07ed2541b!2sNjego%C5%A1eva%2C%20Podgorica%2C%20Montenegro!5e0!3m2!1sen!2s!4v1707248102146!5m2!1sen!2s" 
@@ -90,7 +90,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Booking Form */}
+          {/* Forma za zakazivanje */}
           <motion.div
             id="book"
             initial={{ opacity: 0, x: 30 }}
@@ -126,6 +126,26 @@ export default function Contact() {
                 <input type="tel" className="w-full bg-brand-dark/30 border border-white/5 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-brand-orange/50 focus:bg-brand-dark/80 transition-all rounded-sm placeholder:text-gray-600" placeholder="+382 6X XXX XXX" />
               </div>
               
+              {/* Izbor berbera (Ilija, Marko, Nikola, Filip, Elena) */}
+              <div>
+                <label className="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">{language === 'sr' ? 'Izaberite berbera' : 'Select Barber'}</label>
+                <div className="relative">
+                  <select className="w-full bg-brand-dark/30 border border-white/5 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-brand-orange/50 focus:bg-brand-dark/80 transition-all rounded-sm appearance-none cursor-pointer">
+                    <option className="bg-brand-dark" value="ilija">Ilija (Master Berber)</option>
+                    <option className="bg-brand-dark" value="marko">Marko (Senior Berber)</option>
+                    <option className="bg-brand-dark" value="nikola">Nikola (Senior Berber)</option>
+                    <option className="bg-brand-dark" value="filip">Filip (Junior Berber)</option>
+                    <option className="bg-brand-dark" value="elena">Elena (Junior Berber)</option>
+                  </select>
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L6 6.5L11 1.5" stroke="#F97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Izbor usluge */}
               <div>
                 <label className="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">{language === 'sr' ? 'Izaberite uslugu' : 'Select Service'}</label>
                 <div className="relative">
