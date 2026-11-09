@@ -80,7 +80,7 @@ export default function Contact() {
                         {language === 'sr' ? 'LOKACIJA' : 'LOCATION'}
                       </h4>
                       <p className="text-gray-400 text-sm">
-                        Njegoševa 12<br />81000 Podgorica
+                        Branka Deletića 50<br />81000 Podgorica, Crna Gora
                       </p>
                     </div>
                   </div>
@@ -140,10 +140,10 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Google Mapa */}
-            <div className="w-full h-64 sm:h-80 border border-white/5 rounded-b-sm overflow-hidden relative">
+            {/* Google Mapa sa tačnom lokacijom Ilija Barber (Branka Deletića 50) */}
+            <div className="w-full h-64 sm:h-80 border border-white/5 rounded-b-sm overflow-hidden relative group">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.3824497495393!2d19.258836512130312!3d42.44101183017409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134deb336c53e02f%3A0xc3440cc07ed2541b!2sNjego%C5%A1eva%2C%20Podgorica%2C%20Montenegro!5e0!3m2!1sen!2s!4v1707248102146!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.398453479109!2d19.2304053!3d42.4406607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134deb00162ac01f%3A0x1e655679348725f7!2sIlija%20Barber!5e0!3m2!1sen!2sme!4v1715000000000!5m2!1sen!2sme"
                 width="100%"
                 height="100%"
                 style={{
@@ -154,8 +154,19 @@ export default function Contact() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0"
-                title="Lokacija Barber Ilija"
+                title="Ilija Barber - Branka Deletića 50, Podgorica"
               ></iframe>
+
+              {/* Dugme za direktno otvaranje tačne lokacije na Google Mapama */}
+              <a
+                href="https://www.google.com/maps/place/Ilija+Barber,+50+Branka+Deleti%C4%87a,+Podgorica+81000,+Crna+Gora/@42.4406607,19.2304053,16z/data=!4m6!3m5!1s0x134deb00162ac01f:0x1e655679348725f7!8m2!3d42.4406607!4d19.2304053!16s%2Fg%2F11n9f1vmc0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-3 left-3 z-10 flex items-center gap-2 bg-brand-dark/90 hover:bg-brand-orange text-white text-xs px-3.5 py-2 rounded-sm border border-white/15 backdrop-blur-md transition-all duration-300 shadow-xl group-hover:border-brand-orange cursor-pointer"
+              >
+                <MapPin className="w-3.5 h-3.5 text-brand-orange group-hover:text-white transition-colors" />
+                <span className="font-semibold tracking-wide">Ilija Barber (Otvori na Mapi ↗)</span>
+              </a>
             </div>
           </motion.div>
 
@@ -324,7 +335,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Prikaz tačne cene i trajanja odabrane usluge */}
+                  {/* Prikaz tačne cijene i trajanja odabrane usluge */}
                   {currentServiceObj && (
                     <div className="mt-2.5 px-3.5 py-2 rounded bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs">
                       <span className="text-gray-400">
